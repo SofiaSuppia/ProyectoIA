@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import calendar
-
+#comentario de prueba
 # --- CONFIGURACIÓN DE ARCHIVOS Y PARÁMETROS ---
 ARCHIVOS = {
     'clientes': 'Clientes.xlsx',

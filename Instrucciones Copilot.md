@@ -30,18 +30,22 @@ Herramienta que sirve de apoyo y orientación al usuario durante el desarrollo d
 
 ## 💻 Ejemplo
 
-**Ver el top 5 de `productos.xlsx`**
+**Top 5 de productos más vendidos**
 
 **Contexto:**  
-Revisar los primeros registros del archivo para confirmar que los datos se cargaron correctamente.
+Obtener los 5 productos con mayor venta cruzando `productos.xlsx` y `Detalle_ventas.xlsx`.
 
 **Pasos:**
 
-1. Leer el archivo con Pandas.
-2. Mostrar las primeras 5 filas.
+1. Leer ambos archivos (`productos.xlsx` y `Detalle_ventas.xlsx`).
+2. Definir métrica (cantidad o importe).
+3. Agrupar ventas por `producto_id` y sumar la métrica.
+4. Ordenar en descendente.
+5. Tomar los 5 primeros.
+6. Cruzar con catálogo para mostrar nombres.
 
 **Herramientas:**  
-`pd.read_excel()`, `.head(5)`
+`pd.read_excel()`, `.groupby()`, `.sum()`, `.sort_values()`, `.head(5)`, `.merge()`
 
 **Validación:**  
-El resultado debe mostrar una tabla con 5 productos y las columnas esperadas.
+Se muestra una tabla con 5 productos, ordenados por la métrica seleccionada, con nombre y valor total de venta.
